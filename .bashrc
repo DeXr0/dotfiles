@@ -59,12 +59,12 @@ fi
 if [ "$color_prompt" = yes ]; then
     prompt_color='\[\033[;32m\]'
     info_color='\[\033[1;34m\]'
-    name_color='\[\033[1;32m\]'
+    name_color='\[\033[1;35m\]'
     prompt_symbol=⚠️
     if [ "$EUID" -eq 0 ]; then # Change prompt colors for root user
 	prompt_color='\[\033[;94m\]'
 	info_color='\[\033[1;31m\]'
-	name_color='\[\033[1;32m\]'
+	name_color='\[\033[1;35m\]'
 	prompt_symbol=🛡️
     fi
     PS1=$prompt_color'┌──${debian_chroot:+($debian_chroot)──}('$name_color'\u'$info_color'${prompt_symbol}\h'$prompt_color')-[\[\033[0;1m\]\w'$prompt_color']\n'$prompt_color'└─'$info_color'\$\[\033[0m\] '
